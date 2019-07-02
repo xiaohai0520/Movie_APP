@@ -1,7 +1,7 @@
 # Movie Search Application
 A small program for movie search in the database.
 
-
+<p align="center"><img src="https://github.com/xiaohai0520/Movie_APP/blob/master/picture/demo.png?raw=true" align="center" width=600 height=auto/></p>
 
 
 ## Content
@@ -84,8 +84,6 @@ So we can get the relative movie with any distance. Maybe they can be connected 
 1. If we do not search successfully, we need to handle the null object.
 2. Create the table of info UI.
 
-
-<p align="center"><img src="https://github.com/xiaohai0520/Movie_APP/blob/master/picture/demo.png?raw=true" align="center" width=600 height=auto/></p>
 
 
 
