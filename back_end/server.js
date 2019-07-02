@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 app.use(require('./neo4j'));
 
 // Example Route
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
     console.log(111111111111)
-    const movie = req.body.movie;
-    console.log(movie)
+    const movie = req.query.name;
+    console.log(movie);
     // Create Driver session
     const session = req.driver.session();
 
@@ -23,11 +23,11 @@ app.post('/', (req, res) => {
     const cypher1 = `MATCH (m:Movie) where m.name = "${movie}" RETURN m`;
     const cypher2 = `MATCH (m:Movie) where m.name = "${movie}" with m match (m:Movie)-[:actBy]-(a:Actor) RETURN a`;
     const cypher3 = `MATCH (m:Movie) where m.name = "${movie}" with m match (m:Movie)-[:directBy]-(d:Director) RETURN d`;
-
     const cypher4 = `MATCH (m:Movie) where m.name = "${movie}" with m match (m:Movie)-[:gen]-(g:Genre) RETURN g`;
     const cypher5 = `MATCH (m:Movie) where m.name = "${movie}" with m match (m:Movie)-[*1..2]-(m1:Movie) return distinct m1.name limit 5`;
     session.run(cypher1)
         .then(result => {
+            console.log(result);
             // On result, get count from first record
             const m = result.records[0].get('m');
             console.log(m)
@@ -76,8 +76,8 @@ app.post('/', (req, res) => {
                 arr.push(result.records[i].get('m1.name'));
             }
 
-            data.recoms = arr
-            
+            data.recommendation = arr
+            console.log(arr);
             
             // data.genre = g.properties.genre
             res.send(data);
