@@ -15,11 +15,12 @@ The program depends on *[React.js](https://github.com/facebook/react)* + *[Expre
 
 # Usage
 1. Clone this repository. 
+    You can also download this repository directly.   
     ```
     git clone git@github.com:xiaohai0520/Movie_APP.git
     ```
-    You can also download this repository directly.   
-    There are three folders at total. Frond end, back end and create database.   
+   
+ 
 2. Install Neo4j:
     Install the Neo4j database tutorial can be found *[here](https://neo4j.com/)*.  
     After installing the Neo4j database, start the database server:
