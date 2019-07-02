@@ -1,6 +1,9 @@
 # Movie Search Application
 A small program for movie search in the database.
 
+
+
+
 ## Content
 - [Deployment](#deployment)
 - [Usage](#usage)
@@ -67,6 +70,7 @@ Genre node just have the type information.
 Expect four kinds of nodes, we also have some kinds of relationships including the acting, directing and genre.
 Through these nodes and relationships, we can search any chain relationship in the database.
 
+<p align="center"><img src="https://github.com/xiaohai0520/Movie_APP/blob/master/picture/node.png?raw=true" align="center" width=600 height=auto/></p>
 
 ## Experiments
 We can search in the database with cypher.
@@ -81,7 +85,7 @@ So we can get the relative movie with any distance. Maybe they can be connected 
 2. Create the table of info UI.
 
 
-
+<p align="center"><img src="https://github.com/xiaohai0520/Movie_APP/blob/master/picture/demo.png?raw=true" align="center" width=600 height=auto/></p>
 
 
 
