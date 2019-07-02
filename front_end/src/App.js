@@ -23,7 +23,8 @@ const particlesOptions = {
 class App extends Component {
   constructor() {
     super();
-    this.state = {
+      this.state = {
+        searchName:'',
         info: {
             name: '',
             year: '',
@@ -43,18 +44,19 @@ class App extends Component {
       this.changeInfo = this.changeInfo.bind(this);
   }
 
-  changeInfo = (data) => {
+    changeInfo = (data) => {
+        console.log(data);
       this.setState({ info: data });
   }
 
   onInputChange = (event) => {
-
-      this.setState({ info: { name: event.target.value } });
+      console.log(event.target.value);
+      this.setState({ searchName: event.target.value});
 
   }
 
-  onButtonSubmit = () => {
-      fetch(serverurl + '/:name')
+    onButtonSubmit = () => {
+        fetch(serverurl + `?name=${this.state.searchName}`)
           .then(res => res.json())
           .then(data => {
               this.changeInfo(data);
