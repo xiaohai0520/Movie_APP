@@ -5,6 +5,7 @@ A small program for movie search in the database.
 - [Deployment](#deployment)
 - [Usage](#usage)
 - [Dataset](#dataset)
+- [Experiments](#experiments)
 - [TODO](#todo)
 
 
@@ -57,7 +58,8 @@ The program depends on *[React.js](https://github.com/facebook/react)* + *[Expre
 ## Database:
 The dataset are found from Kaggle. The movie dataset includes more than 10K records.  
 We use the Neo4j to create the database.The main idear is film recommendation.    
-Firstly, we create the movie database with the neo4j database. There are four kinds of nodes: film, actor, director and genre.    
+Firstly, we create the movie database with the neo4j database.   
+There are four kinds of nodes: film, actor, director and genre.    
 The film node includes the year, budget and source property.    
 The actor and director node have the property of the information of people.    
 Genre node just have the type information.     
@@ -65,15 +67,18 @@ Expect four kinds of nodes, we also have some kinds of relationships including t
 Through these nodes and relationships, we can search any chain relationship in the database.
 
 
-
 ## Experiments
 We can search in the database with cypher.
-With the character of 
+With the character of Neo4j, we can search any relationship between movies.  
+So we can get the relative movie with any distance. Maybe they can be connected by director, actor, genre and so on.
 
 
 
 
-# Reference
+## TODO
+1. If we do not search successfully, we need to handle the null object.
+2. Create the table of info UI.
+
 
 
 
